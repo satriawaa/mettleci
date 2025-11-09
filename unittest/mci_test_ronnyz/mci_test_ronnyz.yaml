@@ -1,15 +1,15 @@
 ---
 given:
-- stage: "Input1"
-  link: "Load"
-  path: "Input1-Load.csv"
+- stage: "testbonus_in"
+  link: "to_transformer"
+  path: "testbonus_in-to_transformer.csv"
 when:
   job: "mci_test_ronnyz"
   controller: null
   parameters: {}
 then:
-- stage: "Output1"
-  link: "Load"
-  path: "Output1-Load.csv"
+- stage: "testbonus_out"
+  link: "to_output"
+  path: "testbonus_out-to_output.csv"
   cluster: null
   ignore: null
